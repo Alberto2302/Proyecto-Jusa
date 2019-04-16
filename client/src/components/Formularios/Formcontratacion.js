@@ -133,6 +133,11 @@ class Formcontratacion extends Component {
               
                      <div className="titulos"><h4>Datos de la empresa</h4></div>
                      
+
+                      <div className="datos">
+                        <label htmlFor="id_empresa">id_Empresa:</label>
+                        <input name="id_empresa" id="id_empresa" type="date"></input>
+                     </div> 
                      
                    <div className="datos">
                         <label htmlFor="empresa">Empresa:</label>
@@ -187,10 +192,7 @@ class Formcontratacion extends Component {
                         <label htmlFor="imss">Numero de IMSS:</label>
                         <input name="imss" id="imss" type="min"></input>
                      </div>
-                     <div className="datos">
-                        <label htmlFor="escolaridad">Escolaridad:</label>
-                        <input name="escolaridad" id="escolaridad" type="text"></input>
-                     </div>
+                   
 
                        <div className="titulos"><h4>Documentacion</h4></div>
                    <div className="datos">

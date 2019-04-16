@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 const  { User } = require('./models/user')
 const { auth } = require('./middleware/auth')
-const  { Employees } = require('./models/employees')
+const  { Employees } = require('./models/employee')
 
 require('dotenv').config()
 
@@ -24,7 +24,7 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true }, (err) => {
 
 
 //4.rutas para employees
-app.post('/api/employees/register', (req, res) => {
+app.post('/api/employee/register', (req, res) => {
     const employees = new Employees(req.body)
     user.save((err, doc) => {
         if(err) return res.json({success: false, err})
@@ -66,6 +66,7 @@ app.get('/api/users/auth', auth, (req, res) => {
 })
 
 app.get('/api/users/logout', auth, (req, res) => {
+    console.log(req.user)
   User.findOneAndUpdate(
       {_id: req.user._id},
       {token: ''},
@@ -89,7 +90,7 @@ app.post('/api/users/login', (req, res) => {
                    user.generateToken((err, user)=> {
                     if(err) return res.status(400).send(err)
                     // Si todo bien, debemos guardar este token como un "cookie"
-                    res.cookie('guitarshop_auth', user.token).status(200).json(
+                    res.cookie('jusa_auth', user.token).status(200).json(
                         {loginSuccess: true}
                     )
                   })     
