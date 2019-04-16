@@ -9,6 +9,10 @@ import Areas from "./components/Home/Areas";
 import Rh from "./components/Areas/rh/Rh";
 import Nabvar from "./components/Nabvar/Nabvar";
 import Contratacion from './components/Areas/Contratacion';
+import Credenciales from './components/Areas/Credenciales';
+import Fichastecnicas from './components/Areas/Fichastecnicas';
+import Consultas from './components/Areas/Consultas'
+
 
 class App extends Component{
  render(){
@@ -22,6 +26,9 @@ class App extends Component{
       
       <Route path="/areas" exact component={Areas} /> 
       <Route path="/contratacion" exact component={Contratacion} /> 
+      <Route path="/credenciales" exact component={Credenciales} />
+      <Route path="/fichastecnicas" exact component={Fichastecnicas} />
+      <Route path="/consultas" exact component={Consultas} />
       <Route exact path="/" component={index}  />
       <Route component={Error}/>
       </Switch> 

@@ -1,6 +1,18 @@
 import React,  { Component }  from 'react';
 import "../../css/formulario.css"
+import { Link } from "react-router-dom";
+
+
+
 class Formcontratacion extends Component {
+
+
+   handleButton(event) {
+      event.preventDefault();
+      alert("Registrado");
+      return;
+      }
+
     render() {
         return (
         <div className="contenedor">
@@ -276,12 +288,22 @@ class Formcontratacion extends Component {
                         <label htmlFor="captura_información">Recepción de documentos:</label>
                         <input name="captura_información" id="captura_información" type="text"></input>
                      </div>
+                     
+                      
+                     <button type="button" onClick={this.handleButton}>Realizar</button>
+                     
+                    
+
              </div>
                <div className="camara">
                   <div><video id="video"></video></div>
                   <div><canvas id="canvas"></canvas></div>
                   <button >Foto</button>
                </div>
+
+              
+
+
             </div>
 
              </form>

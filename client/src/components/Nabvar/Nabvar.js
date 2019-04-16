@@ -37,9 +37,11 @@ class Nabvar extends Component {
             <div className="toolbar_navigation-items">
             <ul>
                 <li><Link to="/contratacion" >Contratación</Link></li>
-                <li><Link to="/">Credenciales</Link></li>
-                <li><a href="/">Fichas Tecnicas</a></li>
-                <li><a href="/">Consultas</a></li>
+                <li><Link to="/credenciales">Credenciales</Link></li>
+                <li><Link to="/fichastecnicas">Fichas tecnicas</Link></li>
+                <li><Link to="/consultas">Consultas</Link></li>
+                
+               
             </ul>
              </div>
 

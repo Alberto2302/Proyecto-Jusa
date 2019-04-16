@@ -2,6 +2,7 @@
 
 import React,  {Component} from 'react';
 import '../css/login.css';
+import { Link } from "react-router-dom";
 
 class Login extends Component{
  render(){
@@ -22,12 +23,13 @@ class Login extends Component{
                         <input text="password" name="password" className="login-imput" placeholder="Password" ></input>
                 </div> 
 
-
+              
+              <Link to="/rh" > 
                 <button type="button" className="login-btn" onClick={this.onClick} placeholder="ingresa">
-                    Ingresa                
+                          Ingresa   
                 </button>
                 
-               
+                </Link>
 
              </div>
 
