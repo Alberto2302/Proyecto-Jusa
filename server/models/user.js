@@ -26,7 +26,7 @@ require('dotenv').config()
             maxlength:100
         },
         privileges: {
-            type: String,
+            type: Number,
             required: true,
         },
        

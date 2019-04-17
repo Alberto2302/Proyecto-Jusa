@@ -1,10 +1,11 @@
 
 const mongoose = require('mongoose')
-
+require('dotenv').config()
 
 
     const employeeSchema = mongoose.Schema({
-        id_empleado:{
+
+        id_employee:{
             type: Number,
             required: true,
             trim:true,
@@ -113,7 +114,7 @@ const mongoose = require('mongoose')
             maxlength: 100
         },
         cp:{
-            type:String,
+            type:Number,
             required: true,
             maxlength: 100
         },
@@ -193,6 +194,6 @@ const mongoose = require('mongoose')
 
     })
 
-    const Employee = mongoose.model('Employee', employeeSchema)
+    const Employee = mongoose.model('Employee', employeeSchema, "employeeSchema")
 
     module.exports = { Employee }

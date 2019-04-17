@@ -8,7 +8,7 @@ const mongoose = require('mongoose')
 const cookieParser = require('cookie-parser')
 const  { User } = require('./models/user')
 const { auth } = require('./middleware/auth')
-const  { Employees } = require('./models/employee')
+const  { Employee } = require('./models/employee')
 
 require('dotenv').config()
 
@@ -23,10 +23,13 @@ mongoose.connect(process.env.DATABASE, { useNewUrlParser: true }, (err) => {
 //3.Modelos
 
 
-//4.rutas para employees
-app.post('/api/employee/register', (req, res) => {
-    const employees = new Employees(req.body)
-    user.save((err, doc) => {
+//4.rutas para employee
+
+
+//registrar usuarios crear
+app.post('/api/employees/register', (req, res) => {
+    const employee = new Employee(req.body)
+    employee.save((err, doc) => {
         if(err) return res.json({success: false, err})
         res.status(200).json({
             success: true,
@@ -34,6 +37,40 @@ app.post('/api/employee/register', (req, res) => {
         })
     })
 })
+
+// leer Read
+app.get('/api/employees', (req, res) => {
+    Employee.find({}).then((data) => {
+        res.status(200).json(data)
+    })
+})
+
+
+//editar employee update actualizar
+
+app.post('/api/employees/:id/edit', (req, res) => {
+    Employee.update({id_employee: req.params.id}, { $set: {
+        "cp": req.body.cp,
+        "cellphonenumber": req.body.cellphonenumber,
+    }}).then((data) => {
+        res.status(200).json({
+            mongoDB: data,
+            message: "Data cambiada"
+        });
+    })
+})
+
+
+//eliminar employee borrar
+app.delete('/api/employees/:id/delete', (req, res) => {
+    Employee.remove({"id_employee": req.params.id }).then((data) => {
+        res.status(200).json({
+            message: "Empleado borrado"
+        })
+    })
+})
+
+
 
 
 
