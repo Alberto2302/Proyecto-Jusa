@@ -9,13 +9,13 @@ const cookieParser = require('cookie-parser')
 const  { User } = require('./models/user')
 const { auth } = require('./middleware/auth')
 const  { Employee } = require('./models/employee')
-
+const cors = require('cors') 
 require('dotenv').config()
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cookieParser())
-
+app.use(cors())
 mongoose.connect(process.env.DATABASE, { useNewUrlParser: true }, (err) => {
   if(err) return err
   console.log("Conectado a MongoDB")
@@ -69,10 +69,6 @@ app.delete('/api/employees/:id/delete', (req, res) => {
         })
     })
 })
-
-
-
-
 
 
 //4.rutas para usuario

@@ -1,23 +1,37 @@
 import React,  { Component }  from 'react';
-import "../../css/formulario.css"
-import { Link } from "react-router-dom";
-
+import "../../css/formulario.css";
+import axios from "axios";
 
 
 class Formcontratacion extends Component {
+state = {
+   name: '',
+}
 
+handleChangle = event => {
+  this.setState({ name: event.target.value });
+}
 
-   handleButton(event) {
+handleSubmit = event => {
       event.preventDefault();
-      alert("Registrado");
-      return;
-      }
+
+      const user = {
+         name: this.state.name,
+      };
+
+  axios.post(`http://localhost:3002/api/employees`, { user })  
+    .then(res => {
+      console.log(res);
+       console.log(res.data);
+ })
+}
+   
 
     render() {
         return (
         <div className="contenedor">
           <header className="formulario">   
-            <form className="formdatos">
+            <form className="formdatos" onSubmit={this.handleSubmit}>
              <div className= "flex-container">
                 <div className="flex-container-div">
                    <div className="titulos"><h4>Datos Personales</h4></div>
@@ -27,7 +41,7 @@ class Formcontratacion extends Component {
                      </div>
                      <div className="datos">
                         <label htmlFor="nombreempleado">Nombre:</label>
-                        <input name="nombreempleado" id="nombreempleado" type="text"></input>
+                        <input name="name"   type="text" onChange={this.handleChangle}></input>
                      </div>
                      <div className="datos">
                         <label htmlFor="apaterno" >A.Paterno:</label>
@@ -292,7 +306,7 @@ class Formcontratacion extends Component {
                      </div>
                      
                       
-                     <button type="button" onClick={this.handleButton}>Realizar</button>
+                     <button type="submit" >Realizar</button>
                      
                     
 

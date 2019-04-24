@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACT,MAAM,EAAE,GAAG;EACX,OAAO,EAAE,GAAG;EACZ,UAAU,EAAE,GAAG;;AAGf,MAAM;EACF,UAAU,EAAE,EAAE",
+"sources": ["../sass/consultas.scss"],
+"names": [],
+"file": "consultas.css"
+}

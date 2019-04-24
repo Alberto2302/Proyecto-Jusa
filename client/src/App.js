@@ -24,7 +24,7 @@ class App extends Component{
       <Route path="/rh" exact component={Rh}/>
       <Route path="/navbar" exact component={Nabvar}/>
       
-      <Route path="/areas" exact component={Areas} /> 
+      <Route path="/areas" exact component={Areas} />   
       <Route path="/contratacion" exact component={Contratacion} /> 
       <Route path="/credenciales" exact component={Credenciales} />
       <Route path="/fichastecnicas" exact component={Fichastecnicas} />
