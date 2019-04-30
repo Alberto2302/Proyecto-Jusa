@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import "../../../css/navbar.css";
+import "../../../css/rh.css";
 import Navbar from '../../Nabvar/Nabvar';
 
 class Rh extends Component {
     render(){
         return(
-            <div>
-                <Navbar>
+            
 
-                </Navbar>           
-            </div>
+            <div className="Rh">
+            
+                <div>
+                <Navbar/>
+                </div>
+                <h1 className="bienvenida">Bienvenido Alberto Corona</h1>
+
+                </div>
+            
         );
     }
 }

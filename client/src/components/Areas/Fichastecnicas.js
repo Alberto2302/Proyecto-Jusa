@@ -9,7 +9,7 @@ class Fichastecnicas extends Component {
     render(){
         return(
     
-        <div className="App">
+        <div className="Appp">
 
                 <Navbar/>
                 

@@ -3,7 +3,6 @@ import Navbar from "../Nabvar/Nabvar";
 
 import Formcontratacion from '../Formularios/Formcontratacion';
 
-import '../../css/contratacion.css';
 
 class Contratacion extends Component {
     render(){
