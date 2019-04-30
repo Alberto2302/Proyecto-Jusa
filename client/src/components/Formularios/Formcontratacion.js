@@ -162,8 +162,8 @@ handleSubmit = event => {
                         <input name="cellphonenumber" id="celular" type="text" onChange={this.handleChangle}></input>
                      </div>
                      <div className="datos">
-                        <label htmlFor="email">Numero Celular:</label>
-                        <input name="email" id="celular" type="email" onChange={this.handleChangle}></input>
+                        <label htmlFor="email">Correo:</label>
+                        <input name="email" id="email" type="email" onChange={this.handleChangle}></input>
                      </div>
 
                      <div className="titulos"><h4>Contacto de emergencia</h4></div>

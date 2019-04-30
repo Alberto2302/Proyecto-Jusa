@@ -20,7 +20,7 @@ class Login extends Component{
 
                  <div className="input-group" >
                         <label htmlFor="password">Ingresa Password: </label>
-                        <input text="password" name="password" className="login-imput" placeholder="Password" ></input>
+                        <input type="password" name="password" className="login-imput" placeholder="Password" ></input>
                 </div> 
 
               

@@ -34,6 +34,15 @@ render(){
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Apellidos</th>
+                <th>Originario</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Genero</th>
+                <th>Estado Civil</th>
+                <th>CURP</th> 
+
+
+
+
               </tr>
             </thead>
             <tbody>
@@ -45,6 +54,18 @@ render(){
                 <td>{person.id_employee}</td>
                 <td>{person.name}</td>
                 <td>{person.lastnamefat} {person.lastnamemoth}</td>
+                <td>{person.origin}</td>
+                <td>{person.birthdate}</td>
+                <td>{person.gender}</td>
+                <td>{person.civilstatus}</td>
+                <td>{person.curp}</td>
+
+
+
+
+
+
+
               </tr>
             )
             )}
