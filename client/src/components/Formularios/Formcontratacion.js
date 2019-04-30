@@ -5,28 +5,32 @@ import axios from "axios";
 
 class Formcontratacion extends Component {
 state = {
+   id_employee:'',
    name: '',
+   
 }
 
 handleChangle = event => {
+  this.setState({ id_employee: event.target.value });
   this.setState({ name: event.target.value });
+  
 }
 
 handleSubmit = event => {
       event.preventDefault();
 
-      const user = {
+      const employeeSchema = {
+         id_employee: this.state.id_employee,
          name: this.state.name,
+         
       };
 
-  axios.post(`http://localhost:3002/api/employees`, { user })  
+  axios.post(`http://localhost:3002/api/employees/register`, { employeeSchema })  
     .then(res => {
       console.log(res);
        console.log(res.data);
  })
 }
-   
-
     render() {
         return (
         <div className="contenedor">
@@ -36,12 +40,12 @@ handleSubmit = event => {
                 <div className="flex-container-div">
                    <div className="titulos"><h4>Datos Personales</h4></div>
                      <div className="datos">
-                          <label htmlFor="idempleado">id_Empleado:</label>
-                         <input name="idempleado" id="idempleado" type="text"></input>
+                          <label htmlFor="id_employee">id_Empleado:</label>
+                         <input name="id_employee" id="id_employee" type="text" onChange={this.handleChangle}   ></input>
                      </div>
                      <div className="datos">
                         <label htmlFor="nombreempleado">Nombre:</label>
-                        <input name="name"   type="text" onChange={this.handleChangle}></input>
+                        <input name="name" type="text" onChange={this.handleChangle}></input>
                      </div>
                      <div className="datos">
                         <label htmlFor="apaterno" >A.Paterno:</label>
