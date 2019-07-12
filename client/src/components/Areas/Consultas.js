@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from "../Nabvar/Nabvar";
-import "../../css/consultas.css"
+import "../../css/consultas.css";
 import axios from 'axios';
 import { Table } from 'reactstrap';
 import '../../css/contratacion.css';
@@ -40,9 +40,6 @@ render(){
                 <th>Estado Civil</th>
                 <th>CURP</th> 
 
-
-
-
               </tr>
             </thead>
             <tbody>
@@ -59,13 +56,6 @@ render(){
                 <td>{person.gender}</td>
                 <td>{person.civilstatus}</td>
                 <td>{person.curp}</td>
-
-
-
-
-
-
-
               </tr>
             )
             )}
@@ -81,4 +71,4 @@ render(){
 
 }
 
-export default PersonList
+export default PersonList;

@@ -40,7 +40,7 @@ class Nabvar extends Component {
                 <li><Link to="/credenciales">Credenciales</Link></li>
                 <li><Link to="/fichastecnicas">Fichas tecnicas</Link></li>
                 <li><Link to="/consultas">Consultas</Link></li>
-                
+                <li><Link to="/createTodo">Nuevos</Link></li>
                
             </ul>
              </div>

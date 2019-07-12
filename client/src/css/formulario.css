@@ -20,13 +20,13 @@ input {
   font-size: 15px;
   margin: 2px;
   border-radius: 5px;
-  height: 15px; }
+  height: 28px; }
 
 .datos {
   display: flex; }
 
 .selector {
-  font-size: 15px; }
+  font-size: 25px; }
 
 .flex-container {
   display: flex;
@@ -37,14 +37,15 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  margin: 20px; }
 
 select {
-  font-size: 10px;
+  font-size: 18px;
   margin: 2px;
   border-radius: 5px;
-  height: 15px;
-  width: 100px; }
+  height: 25px;
+  width: 60%; }
 
 .camara {
   width: 100%;

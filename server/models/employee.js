@@ -129,7 +129,7 @@ require('dotenv').config()
             maxlength: 100
         },
         
-        //Documentos
+    
         birthCertificate:{
             type:String,
             required: true,

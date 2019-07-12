@@ -7,7 +7,6 @@
     "server": "nodemon server/server.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
-
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,7 @@
   "homepage": "https://github.com/Alberto2302/Proyecto-Jusa",
   "dependencies": {
     "bcrypt": "^3.0.5",
+    "boostrap": "^2.0.0",
     "cloudinary": "^1.14.0",
     "concurrently": "^4.1.0",
     "cookie-parser": "^1.4.4",

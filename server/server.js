@@ -3,13 +3,16 @@
 
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3002
+const cors = require('cors') 
 const mongoose = require('mongoose')
+const port = process.env.PORT || 3002;
 const cookieParser = require('cookie-parser')
 const  { User } = require('./models/user')
 const { auth } = require('./middleware/auth')
 const  { Employee } = require('./models/employee')
-const cors = require('cors') 
+
+
+
 require('dotenv').config()
 
 app.use(express.urlencoded({extended: true}))

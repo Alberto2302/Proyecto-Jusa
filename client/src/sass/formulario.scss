@@ -1,10 +1,5 @@
 
 
-
-
-
-
-
 .contenedor{
     margin-top: 100px;
     
@@ -31,7 +26,7 @@ input{
 font-size: 15px;
 margin: 2px;
 border-radius: 5px;
-height: 15px;
+height: 28px;
 }
 .formdatos{
     
@@ -41,7 +36,7 @@ height: 15px;
   display: flex;
 }
 .selector{
-    font-size: 15px;
+    font-size: 25px;
 }
 .flex-container {
     display: flex;
@@ -54,14 +49,15 @@ height: 15px;
    justify-content: center;
    align-items: center; 
    width: 100%;
-  
+   margin: 20px;
+
   }
   select{
-    font-size: 10px;
+    font-size: 18px;
     margin: 2px;
     border-radius: 5px;
-    height: 15px;
-    width: 100px;
+    height: 25px;
+    width: 60%;
   }
 
 .camara{

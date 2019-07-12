@@ -12,7 +12,7 @@ class Rh extends Component {
                 <div>
                 <Navbar/>
                 </div>
-                <h1 className="bienvenida">Bienvenido Alberto Corona</h1>
+                <h1 className="bienvenida">Bienvenido Mario</h1>
 
                 </div>
             

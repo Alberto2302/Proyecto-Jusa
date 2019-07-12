@@ -11,7 +11,8 @@ import Nabvar from "./components/Nabvar/Nabvar";
 import Contratacion from './components/Areas/Contratacion';
 import Credenciales from './components/Areas/Credenciales';
 import Fichastecnicas from './components/Areas/Fichastecnicas';
-import Consultas from './components/Areas/Consultas'
+import Consultas from './components/Areas/Consultas';
+import CreateTodo from './components/Areas/CreateTodo'
 
 
 class App extends Component{
@@ -23,7 +24,7 @@ class App extends Component{
       <Switch>
       <Route path="/rh" exact component={Rh}/>
       <Route path="/navbar" exact component={Nabvar}/>
-      
+      <Route path="/createtodo" component={CreateTodo} />
       <Route path="/areas" exact component={Areas} />   
       <Route path="/contratacion" exact component={Contratacion} /> 
       <Route path="/credenciales" exact component={Credenciales} />
