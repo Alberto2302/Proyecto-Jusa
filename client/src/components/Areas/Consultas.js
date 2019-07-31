@@ -22,7 +22,7 @@ componentDidMount(){
 render(){
     return(
    
-        <ul>
+        <div>
         <div>
         <Navbar/>
         </div>
@@ -63,7 +63,7 @@ render(){
             </tbody>
             </Table>
             </div>
-        </ul>
+            </div>
 
 
     )

@@ -1,5 +1,5 @@
 .contenedor {
-  margin-top: 100px; }
+  margin-top: 0%; }
 
 header {
   margin: 0;
@@ -29,16 +29,29 @@ input {
   font-size: 25px; }
 
 .flex-container {
+  margin: 0%;
+  padding: 0%;
   display: flex;
   flex-wrap: nowrap; }
 
 .flex-container-div {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 20px; }
+  margin-left: 25px; }
+
+.flex-container-div-documentos {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  width: 25%;
+  text-align: center; }
+  .flex-container-div-documentos label {
+    text-align: center;
+    width: 50%; }
+    .flex-container-div-documentos label .file {
+      text-align: center; }
 
 select {
   font-size: 18px;
@@ -59,5 +72,12 @@ video {
   background: red;
   padding: 0;
   margin: 0; }
+
+.file {
+  text-align: center;
+  font-size: 11px; }
+
+.form-group {
+  justify-content: center; }
 
 /*# sourceMappingURL=formulario.css.map */

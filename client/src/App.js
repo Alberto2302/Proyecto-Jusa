@@ -12,6 +12,7 @@ import Contratacion from './components/Areas/Contratacion';
 import Credenciales from './components/Areas/Credenciales';
 import Fichastecnicas from './components/Areas/Fichastecnicas';
 import Consultas from './components/Areas/Consultas';
+import Actualizacion from './components/Areas/rh/Actualizacion';
 import CreateTodo from './components/Areas/CreateTodo'
 
 
@@ -27,6 +28,7 @@ class App extends Component{
       <Route path="/createtodo" component={CreateTodo} />
       <Route path="/areas" exact component={Areas} />   
       <Route path="/contratacion" exact component={Contratacion} /> 
+      <Route path="/actualizacion" exact component={Actualizacion}/>
       <Route path="/credenciales" exact component={Credenciales} />
       <Route path="/fichastecnicas" exact component={Fichastecnicas} />
       <Route path="/consultas" exact component={Consultas} />

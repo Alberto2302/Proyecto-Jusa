@@ -7,14 +7,14 @@ class Rh extends Component {
         return(
             
 
-            <div className="Rh">
+            <div className="Rh" style={{ height:"1500px",background:'cornflowerblue'}}>
             
                 <div>
                 <Navbar/>
                 </div>
                 <h1 className="bienvenida">Bienvenido Mario</h1>
 
-                </div>
+            </div>
             
         );
     }

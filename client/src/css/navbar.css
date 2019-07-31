@@ -41,7 +41,8 @@
 
 .toolbar_navigation-items a {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  font-size: 25px; }
 
 .toolbar_navigation-items a:hover,
 .toolbar_navigation-items a:active {
@@ -50,10 +51,12 @@
 .header_logo {
   text-align: center; }
 
-.fonts_righteous {
-  font-family: 'Righteous', cursive; }
+.font_righteous {
+  font-family: 'Righteous', cursive;
+  font-size: 35px; }
 
 .header_logo_title {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px; }
 
 /*# sourceMappingURL=navbar.css.map */

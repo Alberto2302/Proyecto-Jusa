@@ -8,8 +8,8 @@ class Contratacion extends Component {
     render(){
         return(
     
-        <div className="App">
-
+        <div className="contenedor">
+               
                 <Navbar/>
                 <Formcontratacion/>
            

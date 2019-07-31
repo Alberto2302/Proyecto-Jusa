@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AACA,KAAK;EACD,gBAAgB,EAAE,qCAAqC;EACvD,mBAAmB,EAAE,aAAa;EAClC,iBAAiB,EAAE,SAAS;EAC5B,qBAAqB,EAAE,KAAK;EAC5B,eAAe,EAAE,KAAK;EAEtB,MAAM,EAAE,IAAI;EACR,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,KAAK;EACb,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC",
-"sources": ["../sass/contratacion.scss"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "contratacion.css"
 }

@@ -33,6 +33,7 @@ constructor(props)  {
    this.onChangechronicDiseases = this.onChangechronicDiseases.bind(this);
    this.onChangemedicalVoucher = this.onChangemedicalVoucher.bind(this);
    this.onChangebirthCertificate = this.onChangebirthCertificate.bind(this); 
+   this.onChangeactapdf = this.onChangeactapdf.bind(this);
    this.onChangecurpStatus = this.onChangecurpStatus.bind(this);
    this.onChangeproofofAddress = this.onChangeproofofAddress.bind(this);
    this.onChangenoCriminalrecord = this.onChangenoCriminalrecord.bind(this);
@@ -71,6 +72,7 @@ constructor(props)  {
    chronicDiseases:'',
    medicalVoucher:'',
    birthCertificate:'',
+   actapdf:'',
    curpStatus:'',
    proofofAddress:'',
    noCriminalRecord:'',
@@ -213,6 +215,13 @@ onChangebirthCertificate(e){
          birthCertificate: e.target.value
    });
 }
+onChangeactapdf(e){
+   this.setState({
+      actapdf: e.target.value
+   }
+
+   )
+}
 onChangecurpStatus(e){
    this.setState({
          curpStatus: e.target.value
@@ -309,6 +318,7 @@ onSubmit(e) {
    chronicDiseases: this.state.chronicDiseases,
    medicalVoucher: this.state.medicalVoucher,
    birthCertificate: this.state.birthCertificate,
+   actapdf: this.state.actapdf,
    curpStatus: this.state.curpStatus,
    proofofAddress: this.state.proofofAddress,
    noCriminalRecord: this.state.noCriminalRecord,
@@ -352,6 +362,7 @@ axios.post('/api/employees/register', newTodo)
    chronicDiseases:'',
    medicalVoucher:'',
    birthCertificate:'',
+   actapdf:'',
    curpStatus:'',
    proofofAddress:'',
    noCriminalRecord:'',
@@ -376,12 +387,11 @@ save(e){
 }
     render() {
         return (
-        <div style={{marginTop: 100}} className="contenedor">
-          <header className="formulario">   
+        <div  className="contenedor" style={{ height:"1500px",background:'cornflowerblue'}}>
+          <header className="formulario" >   
             <form className="formdatos" onSubmit={this.onSubmit}>
 
              <div className= "flex-container">
-
                 <div className="flex-container-div">
                    <div className="titulos"><h4>Datos Personales</h4></div>
                      <div className="form-group">
@@ -443,6 +453,12 @@ save(e){
                         <input name="email" id="email" type="email" value={this.state.email} onChange={this.onChangeemail}></input>
                      </div>
 
+                     
+                     
+                   </div>  
+
+                   <div className="flex-container-div">
+
                      <div className="titulos"><h4>Contacto de emergencia</h4></div>
                      <div className="form-group">
                         <label htmlFor="emergencyContact">Nombre:</label>
@@ -456,10 +472,7 @@ save(e){
                         <label htmlFor="contactNumber">Numero Celular:</label>
                         <input name="contactNumber" id="celular_parentesco" type="text" value={this.state.contactNumber} onChange={this.onChangecontactNumber}></input>
                      </div>
-                     
-                   </div>  
 
-                   <div className="flex-container-div">
                      <div className="titulos"><h4>Datos de domicilio</h4></div>
                    <div className="form-group">
                         <label htmlFor="homestatus">Casa:</label>
@@ -502,22 +515,22 @@ save(e){
                       </div>
                 
 
-            <div className="flex-container-div">
+            <div className="flex-container-div-documentos">
               
                        <div className="titulos"><h4>Documentacion</h4></div>
-
+                       <label htmlFor="birthCertificate">Acta de nacimiento:</label>
                          <div className="form-group">
-                           <label htmlFor="birthCertificate">Acta de nacimiento:</label>
-
+                         <input name="actapdf" id="acta_pdf" type="file"  className="file"  ></input>
                               <select name="birthCertificate" id=" birthCertificate" value={this.state.birthCertificate} onChange={this.onChangebirthCertificate} >
                               <option value="">Selecciona una opción</option>
                               <option value="no_entrega">no entrega</option>
                               <option value="buen_estado">Buen estado</option>
                               <option value="buen_estado">Mal estado</option>
-                              </select>
+                              </select>  
+                              
                         </div>
-
-
+                       
+                           
                       <div className="form-group">
                               <label htmlFor="curpStatus">Curp:</label>
                               <select name="curpStatus" id="Estatus_curp" value={this.state.curpStatus} onChange={this.onChangecurpStatus}>
@@ -526,6 +539,7 @@ save(e){
                               <option value="buen_estado">Buen estado</option>
                               <option value="buen_estado">Mal estado</option>
                               </select>
+                              <input type="file" name="curppdf"></input>
                       </div> 
 
                   
@@ -537,6 +551,7 @@ save(e){
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
                         </select>
+                        <input type="file" name="comprobdompdf"></input>
                    </div>
                    <div className="form-group">
                         <label htmlFor="noCriminalRecord">Antecedentes no penales:</label>
@@ -545,6 +560,7 @@ save(e){
                         <option value="no_entrega">no entrega</option>
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
+                        <input type="file" name="antecedentespdf"></input>
                         </select>
                    </div>
                    <div className="form-group">
@@ -555,6 +571,7 @@ save(e){
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
                         </select>
+                        <input type="file" name="cartillapdf"></input>
                    </div>
 
                   <div className="form-group">
@@ -565,6 +582,7 @@ save(e){
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
                         </select>
+                        <input type="file" name="precartillapdf"></input>
                    </div>
 
                     <div className="form-group">
@@ -575,6 +593,7 @@ save(e){
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
                         </select>
+                        <input type="file" name="compestudiospdf"></input>
                    </div>
                    <div className="form-group">
                         <label htmlFor="letterOfrecommendation">Cartas de recomendación:</label>
@@ -583,7 +602,9 @@ save(e){
                         <option value="no_entrega">no entrega</option>
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
+                        <input type="file" name="archivosubido"></input>
                         </select>
+                        <input type="file" name="cartarecpdfpdf"></input>
                    </div> 
                    <div className="form-group">
                         <label htmlFor="copyOfIne">Copia de INE:</label>
@@ -593,6 +614,7 @@ save(e){
                         <option value="buen_estado">Buen estado</option>
                         <option value="buen_estado">Mal estado</option>
                         </select>
+                        <input type="file" name="inepdf"></input>
                    </div> 
 
                       <div className="titulos"><h4>Información adicional</h4></div> 
@@ -607,20 +629,13 @@ save(e){
                         <input name="documentsReception" id="captura_información" type="text" value={this.state.documentsReception} onChange={this.onChangedocumentsReception}></input>
                      </div>
                      
-                      
-                    
                     <div className="form-group">
                     <input type="submit" value="Guardar" className="btn btn-primary" />
                     <span style={{color: 'green'}}>{this.state.message}</span>
                     </div>
                     </div>
-                     
-
-                  
                      </div>
-                     <div style={{width:'30%', height:'200px'}} >
-                        <span>{JSON.stringify(this.state)}</span>
-                     </div>
+                    
 
              </form>
              </header>
